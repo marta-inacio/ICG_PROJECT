@@ -1,9 +1,9 @@
 
 //COLORS
 var Colors = {
-  red: 0xf25346,
+  red: 0xff0800,
   white: 0xd8d0d1,
-  pink: 0xF5986E,
+  pink: 0xFF007F,
   brown: 0x59332e,
   brownDark: 0x23190f,
   blue: 0x3A9B3B,
@@ -164,7 +164,7 @@ var ball;
 function createBalls() {
   for (var i = 0; i < numBalls; i++) {
     var ballGeometry = new THREE.SphereGeometry(ballRadius, 32, 32);
-    var ballMaterial = new THREE.MeshPhongMaterial({ color: Colors.pink });
+    var ballMaterial = new THREE.MeshPhongMaterial({ color: Colors.red });
     ball = new THREE.Mesh(ballGeometry, ballMaterial);
 
     // Initialize the hitAngle property to zero
