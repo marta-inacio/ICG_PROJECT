@@ -1,4 +1,4 @@
-# ICG_PROJECT
+# Bubble World
 
 ## Author:
  - Name: Marta Inácio
