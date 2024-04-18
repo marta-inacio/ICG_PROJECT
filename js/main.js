@@ -12,7 +12,7 @@ var Colors = {
 // THREEJS RELATED VARIABLES
 
 var scene,
-  camera, fieldOfView, aspectRatio, nearPlane, farPlane,
+  camera, fieldOfView, aspectRatio,
   renderer, container;
 
 //SCREEN VARIABLES
