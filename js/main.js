@@ -20,13 +20,13 @@ var scene,
 var HEIGHT, WIDTH;
 
 // WORLD AND BALLS
-var cylinderRadius = 600; // Radius of the cylinder
-var cylinderHeight = 800; // Height of the cylinder
-var cubeSize = 50; // Size of the cube
-var numBalls = 10; // Number of balls
-var balls = []; // Array to store the balls
-var ballRadius = 10; // Radius of the ball
-var bounceHeight = 60; // Maximum height of the bounce
+var cylinderRadius = 600;  // Radius of the cylinder
+var cylinderHeight = 800;  // Height of the cylinder
+var cubeSize = 50;         // Size of the cube
+var numBalls = 10;         // Number of balls
+var balls = [];            // Array to store the balls
+var ballRadius = 10;       // Radius of the ball
+var bounceHeight = 60;     // Maximum height of the bounce
 var bounceSpeed = 0.00005; // Speed of the bounce
 var step = 0;
 
@@ -45,9 +45,9 @@ function createScene() {
     aspectRatio,
   );
 
-  // const axes = new THREE.AxesHelper(20);
+  const axes = new THREE.AxesHelper(20);
 
-  // scene.add(axes);
+  scene.add(axes);
 
   scene.fog = new THREE.Fog(0xf7d9aa, 100, 950);
   camera.position.x = 0;
@@ -114,7 +114,7 @@ World = function () {
   var mat = new THREE.MeshPhongMaterial({
     color: Colors.brownDark,
     transparent: true,
-    opacity: 1,
+    opacity: 6,
     flatShading: THREE.FlatShading,
 
   });
@@ -154,8 +154,13 @@ function createCube() {
   var material = new THREE.MeshPhongMaterial({ color: Colors.white });
   cube = new THREE.Mesh(geometry, material);
   cube.position.set(0, cubeSize / 2, -cubeSize * 2); // Position in the surface of the wordl cilynder
-  scene.add(cube);
+  
+  const lagarto = createLagarto(cube.position.x);
+  scene.add(lagarto);
+
+  // scene.add(cube);
 }
+
 
 // BALLS
 
@@ -217,6 +222,7 @@ function handleKeyDown(event) {
     case 65: // 'A' key
       // Move the cylinder to the left
       world.mesh.rotation.z -= .02;
+
       break;
     case 39: // Right arrow key
     case 68: // 'D' key
@@ -270,7 +276,7 @@ loader.load('path_to_model', function (geometry) {
     material
   );
 
-  mesh.rotation.y = -Math.PI / 5;
+  // mesh.rotation.y = -Math.PI / 5;
 
   scene.add(mesh);
 });
