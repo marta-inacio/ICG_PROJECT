@@ -2,7 +2,7 @@ body {
     font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0;
     color: #444;
-    background: #b14f3e;
+    background: #1caee7;
 }
 
 .world {
@@ -12,7 +12,7 @@ body {
 	height: 100%;
 	overflow: hidden;
     margin: 0px;
-    background-color: rgb(252, 122, 35);
+    background-color: rgb(35, 227, 252);
 }
 
 
