@@ -18,7 +18,7 @@ No caso de existir mais tempo disponivel e caso seja um projeto demasiado simple
 	- adicionar obstáculos que alterem a rotas das bolas, quandp estas colidissem com os mesmos;
 	 
 ## Onde jogar:
-- https://marta-inacio.github.io/ICG_PROJECT/
+- https://main--strong-kulfi-e44c89.netlify.app/
 	
 ### Referências:
  - **Bubble Trouble**: https://poki.com/en/g/bubble-trouble
