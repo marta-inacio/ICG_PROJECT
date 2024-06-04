@@ -38,3 +38,22 @@ button {
     font-size: 20px;
     cursor: pointer;
 }
+
+.commands {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 18px;
+    background-color: #ff3c00;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.image{
+    width: 170px;
+}
+
+  

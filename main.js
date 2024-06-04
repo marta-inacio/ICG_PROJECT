@@ -15,7 +15,7 @@ var lagartoHitBox;
 var lagarto, lagartoLastShot = 0;
 var bullets = [];
 var balls = [];
-var numBalls = 4;
+var numBalls = 1;
 var coconut, pine, flow, stylized;
 
 // BULLET LIMIT VARIABLES
@@ -129,34 +129,27 @@ function createWorld() {
 
 function addTrees() {
   const angleIncrement = Math.PI / 2;
-
   
-  for (let i = 0; i < 4; i++) { 
-    const angle = i * angleIncrement;
-    const x = Math.cos(angle) * 600;
-    const y = Math.sin(angle) * 600;
+  for (let p = 0; p < 4; p++) { 
+    const angle = p * angleIncrement;
+    const x = Math.sin(angle) * 600;
+    const y = Math.cos(angle) * 600;
     const z = -250; 
 
-    console.log("tres");
+
+    console.log("tree position:");
     console.log(x);
     console.log(y);
     console.log(z);
 
-
-    // if (i == 0) {
-    coconut = createCoconut(x, y, z);
-    coconut.rotation.z = 3.5;
-    group.add(coconut);
-    // } else if (i == 1) {
-    //   pine = createPine(x, y, z);
-    //   group.add(pine);
-    // } else if (i == 2) {
-    //   flow = createFlow(x, y, z);
-    //   group.add(flow);
-    // } else if (i == 3) {
-    //   stylized = createStylized(x, y, z);
-    //   group.add(stylized);
-    // }
+    if( p%2 === 0){
+      const coconut = createCoconut(x, y, z, angle);
+      group.add(coconut);
+    }else{
+      const pine = createPine(x, y, z, angle);
+      group.add(pine);
+    }
+    
   }
 
 }

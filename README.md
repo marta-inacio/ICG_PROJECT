@@ -17,7 +17,7 @@ No caso de existir mais tempo disponivel e caso seja um projeto demasiado simple
 	- adicionar bolas com diferentes tamanhos dependendo dos niveis que alteram o tamanho e a forma por cada disparo que as atinge;
 	- adicionar obstáculos que alterem a rotas das bolas, quandp estas colidissem com os mesmos;
 	 
-## Como correr:
+## Onde jogar:
 - https://marta-inacio.github.io/ICG_PROJECT/
 	
 ### Referências:
